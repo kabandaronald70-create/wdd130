@@ -13,15 +13,32 @@ aside {
     text-align: center;
 }
 
-aside image {
+aside img {
     width: 200px;
     height: auto;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+hi {
+    color: 2c 3em 50px;
 }
 
 main img {
     width: 150px;
     height: auto;
-    ...
+    border: 2px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.2);
 }
 
 p {
