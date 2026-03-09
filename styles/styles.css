@@ -29,6 +29,10 @@ nav a {
     display: block;
 }
 
+h1 {
+    color: 2c 3rem 50px;
+}
+
 main img {
     width: 150px;
     height: auto;
