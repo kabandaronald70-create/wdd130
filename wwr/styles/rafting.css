@@ -110,6 +110,7 @@ article {
 }
 
 .hero {
+    display: block;
     position: relative;
 }
 
@@ -119,29 +120,30 @@ article {
     height: auto;
 }
 
-h1 {
+.hero .content {
     position: absolute;
-    top: 10%;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
+    down: 20px;
+    left: 20px;
+    width: 300px;
+}
+
+h1 {
+    position: static;
+    padding: 0;
+    text-align: left;
     opacity: 1;
     background-color: transparent;
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-    margin: 0;
+    margin-bottom: 10px;
+}
 }
 
 .hero article {
-    position: absolute;
-    bottom: 20%;
-    right: 20%;
+    position: static;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 15px;
-    width: 100px;
-    border-radius: 0;
     border: 2px solid #000;
     margin: 0;
+}
 }
 
 .hero article img {
