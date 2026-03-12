@@ -7,8 +7,20 @@
 }
 
 header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px;
+    width: 840px;
+    margin: 0 auto;
     background-color: var(--primary-color);
     color: var(--accent2-color);
+}
+
+header img {
+    width: 150px;
+    height: auto;
 }
 
 * {
@@ -22,21 +34,60 @@ body {
     color: var(--accent1-color);
 }
 
-header,
-main,
-footer {
-    width: 840px;
+main {
+    max-width: 840px;
     margin: 0 auto;
 }
 
-h1,
+main img {
+    width: 150px;
+    height: auto;
+    border: 2px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 0 30px gray;
+}
+
+footer {
+    width: 840px;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer img {
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+}
+
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-nav,
-p,
+nav {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a {
+    color: White;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p {
+    padding: 0;
+}
+
 section,
 article {
     margin: 16px;
@@ -45,6 +96,12 @@ article {
 
 .socialmedia a {
     text-decoration: none;
+    display: flex;
+    gap: 15px;
+}
+
+.socialmedia img {
+    width: 30px;
 }
 
 .hero {
@@ -65,7 +122,9 @@ h1 {
     text-align: center;
     opacity: 0.7;
     background-color: var(--accent1-color);
-    color: #fff;
+    color: #2c3e50;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
 }
 
 .hero article {
@@ -82,4 +141,49 @@ h1 {
     float: right;
     width: 125px;
     margin-left: 10px;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 200px 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.history img {
+    width: 100%;
+}
+
+.adventures {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.adventures figure {
+    margin: 10px;
+    text-align: center;
+}
+
+.adventures img {
+    width: 150px;
+    height: auto;
+    border: 2px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 0 30px gray;
+}
+
+.adventures figcaption {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+figure {
+    margin: 10px;
+}
+
+h2 {
+    text-align: center;
 }
