@@ -66,6 +66,11 @@ footer img {
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    text-align: center;
+    background-color: var(--accent2-color);
+    padding: 10px;
+    margin: 16px;
+    border-radius: 5px;
 }
 
 nav {
@@ -116,25 +121,27 @@ article {
 
 h1 {
     position: absolute;
-    top: 20px;
+    top: auto;
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #2c3e50;
+    opacity: 1;
+    background-color: transparent;
     font-family: var(--heading-font);
     color: var(--primary-color);
+    margin: 0;
 }
 
 .hero article {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: auto;
+    right: auto;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 15px;
-    width: 300px;
-    border-radius: 10px;
+    width: 100px;
+    border-radius: 0;
+    border: 2px solid #000;
+    margin-top: 10px;
 }
 
 .hero article img {
