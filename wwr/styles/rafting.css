@@ -120,30 +120,28 @@ article {
     height: auto;
 }
 
-.hero .content {
+.content {
     position: absolute;
-    down: 20px;
-    left: 20px;
-    width: 300px;
+    top: 17rem;
+    left: 1rem;
+    right: 1rem;
 }
 
 h1 {
-    position: static;
-    padding: 0;
-    text-align: left;
-    opacity: 1;
+    text-align: center;
+    color: white;
     background-color: transparent;
     margin-bottom: 10px;
-}
+    position: absolute;
+    top: 1rem;
+    left: 15rem;
 }
 
 .hero article {
-    position: static;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 15px;
     border: 2px solid #000;
     margin: 0;
-}
 }
 
 .hero article img {
@@ -153,45 +151,74 @@ h1 {
 }
 
 .history {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
     align-items: center;
-    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.history h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .history img {
-    width: 150px;
+    width: 100%;
     height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.history p {
+    line-height: 1.6;
+    color: #444;
+    text-align: justify;
 }
 
 .adventures {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.adventures h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2rem;
+    color: #1a4d8c;
+    margin-bottom: 20px;
 }
 
 .adventures figure {
-    margin: 10px;
+    margin: 0;
     text-align: center;
 }
 
 .adventures img {
-    width: 150px;
-    height: auto;
-    border: 2px solid #ddd;
-    padding: 10px;
-    box-shadow: 0 0 30px gray;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.adventures img:hover {
+    transform: scale(1.05);
 }
 
 .adventures figcaption {
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-figure {
-    margin: 10px;
-}
-
-h2 {
-    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9rem;
 }
