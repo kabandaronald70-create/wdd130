@@ -30,7 +30,15 @@ button {
     margin-bottom: 15px;
     padding: 0.75rem;
     border-radius: 4px;
-    height: 20px;
+}
+
+input,
+select {
+    height: 45px;
+}
+
+textarea {
+    height: 120px;
 }
 
 button {
