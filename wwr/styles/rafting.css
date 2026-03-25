@@ -6,65 +6,107 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
+header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px;
+    width: 840px;
+    margin: 0 auto;
+    color: var(--accent2-color);
+}
+
+header img {
+    width: 150px;
+    height: auto;
+}
+
+.contact-form,
+.map-container,
+.employees {
+    border: 1px solid #999;
+}
+
 /* Company Information Section */
-.company-info {
+.company-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     margin: 2rem 0;
-    padding: 1rem;
+}
+
+.company-info {
+    background-color: var(--accent2-color);
+    padding: 2rem;
+    border-radius: 8px;
     text-align: center;
+    border: 1px solid #999;
 }
 
 .company-info h1 {
     text-align: center;
     font-family: var(--heading-font);
     color: var(--primary-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     position: static;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .company-details {
     text-align: center;
-    margin-bottom: 2rem;
-    background-color: var(--accent2-color);
-    padding: 2rem;
-    border-radius: 8px;
+
 }
 
 .company-details p {
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
+    margin: 0.75rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* Map Container */
 .map-container {
     margin: 2rem 0;
     text-align: center;
+    border: 1px solid #999;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: var(--accent2-color);
 }
 
 .map-container h2 {
     margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
 .map-container iframe {
     border: none;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    height: 400px;
+    height: 350px;
 }
 
 /* Contact Form Section */
-.contact-form {
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     margin: 2rem 0;
+    align-items: start;
+}
+
+.contact-form {
     background-color: var(--accent2-color);
     padding: 2rem;
     border-radius: 8px;
+    border: 1px solid #999;
 }
 
 .contact-form h2 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .form-row {
@@ -75,27 +117,33 @@
 }
 
 .form-group {
-    flex: 1;
-    min-width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
     font-weight: bold;
     color: var(--primary-color);
+    width: 80px;
+    min-width: 80px;
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
+    padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: var(--body-font);
-    font-size: 1rem;
+    font-size: 0.9rem;
     background-color: white;
+    flex: 1;
+}
+
+.form-group input {
+    flex: 1;
 }
 
 .form-group textarea {
@@ -105,19 +153,22 @@
 /* Radio Group Styling */
 .purpose-group {
     margin-bottom: 1.5rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .purpose-group label {
-    display: block;
-    margin-bottom: 0.5rem;
     font-weight: bold;
     color: var(--primary-color);
+    width: 80px;
+    min-width: 80px;
 }
 
 .radio-options {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    flex: 1;
 }
 
 .radio-option {
@@ -135,24 +186,28 @@
 
 /* Message Textarea */
 .message-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .message-group label {
-    display: block;
-    margin-bottom: 0.5rem;
+    min-width: 80px;
     font-weight: bold;
     color: var(--primary-color);
+    width: 80px;
 }
 
 .message-group textarea {
-    width: 100%;
-    padding: 0.75rem;
+    padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: var(--body-font);
-    font-size: 1rem;
+    font-size: 0.9rem;
     background-color: white;
+    flex: 1;
+    resize: vertical;
+    min-height: 80px;
 }
 
 /* Checkbox Group */
@@ -177,15 +232,13 @@
 .submit-btn {
     background-color: var(--primary-color);
     color: white;
-    padding: 0.75rem 2rem;
+    padding: 0.6rem 2rem;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    display: inline-block;
-    margin-top: 0.5rem;
 }
 
 .submit-btn:hover {
@@ -195,6 +248,9 @@
 /* Employee Profiles Section */
 .employees {
     margin: 3rem 0;
+    border: 1px solid #999;
+    padding: 1.5rem;
+    border-radius: 8px;
 }
 
 .employees h2 {
@@ -211,9 +267,8 @@
 .employee-card {
     text-align: center;
     background-color: var(--accent2-color);
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 8px;
-    transition: transform 0.3s ease;
 }
 
 .employee-card:hover {
@@ -222,10 +277,10 @@
 
 .employee-card img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .employee-card p {
@@ -237,20 +292,47 @@
 .employee-card .employee-title {
     font-weight: normal;
     color: var(--accent1-color);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin-top: 0.25rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .company-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .form-group,
+    .purpose-group,
+    .message-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label,
+    .purpose-group label,
+    .message-group label {
+        width: auto;
+        margin-bottom: 0.25rem;
+    }
+
     .form-row {
         flex-direction: column;
         gap: 1rem;
     }
 
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .radio-options {
+        width: 100%;
+    }
+
     .employee-profiles {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .company-details {
@@ -262,6 +344,64 @@
     }
 
     .map-container iframe {
-        height: 300px;
+        height: 250px;
     }
+}
+
+footer {
+    background-color: #b9a7d6;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #999;
+    width: 840px;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer img {
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    display: flex;
+    gap: 15px;
+}
+
+.socialmedia img {
+    width: 30px;
+}
+
+main {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+main img {
+    width: 150px;
+    height: auto;
+    border: 2px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 0 30px gray;
 }
