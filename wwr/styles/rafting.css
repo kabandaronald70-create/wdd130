@@ -6,13 +6,26 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: #f5f5f5;
+}
+
+/* Header Styles */
 header {
     display: grid;
     grid-template-columns: 200px 1fr;
     align-items: center;
     background-color: var(--primary-color);
-    padding: 10px;
-    width: 840px;
+    padding: 10px 20px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     color: var(--accent2-color);
 }
@@ -22,84 +35,101 @@ header img {
     height: auto;
 }
 
-.contact-form,
-.map-container,
-.employees {
-    border: 1px solid #999;
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content Container */
+main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
 }
 
 /* Company Information Section */
 .company-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.company-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.company-info h1 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.company-details p {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+    color: #333;
+}
+
+/* Hero Container - Map and Form Side by Side */
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     margin: 2rem 0;
 }
 
-.company-info {
-    background-color: var(--accent2-color);
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: center;
-    border: 1px solid #999;
-}
-
-.company-info h1 {
-    text-align: center;
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    position: static;
-    font-size: 1.5rem;
-}
-
-.company-details {
-    text-align: center;
-
-}
-
-.company-details p {
-    margin: 0.75rem 0;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Map Container */
+/* Map Container Styles */
 .map-container {
-    margin: 2rem 0;
-    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    background-color: var(--accent2-color);
     border: 1px solid #999;
     border-radius: 8px;
     padding: 1rem;
-    background-color: var(--accent2-color);
 }
 
 .map-container h2 {
     margin-bottom: 1rem;
     font-size: 1.3rem;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    text-align: center;
 }
 
 .map-container iframe {
-    border: none;
-    border-radius: 8px;
     width: 100%;
     height: 350px;
-}
-
-/* Contact Form Section */
-.contact-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin: 2rem 0;
-    align-items: start;
-}
-
-.contact-form {
-    background-color: var(--accent2-color);
-    padding: 2rem;
+    border: none;
     border-radius: 8px;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    flex: 1;
+    min-width: 320px;
+    background-color: white;
     border: 1px solid #999;
+    border-radius: 8px;
+    padding: 1.5rem;
 }
 
 .contact-form h2 {
@@ -107,107 +137,100 @@ header img {
     margin-top: 0;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
 }
 
+/* Form Row with Two Columns */
 .form-row {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 1.5rem;
     flex-wrap: wrap;
 }
 
 .form-group {
+    flex: 1;
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .form-group label {
     font-weight: bold;
     color: var(--primary-color);
-    width: 80px;
-    min-width: 80px;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-    padding: 0.5rem;
+.form-group input {
+    padding: 0.7rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: var(--body-font);
     font-size: 0.9rem;
-    background-color: white;
-    flex: 1;
 }
 
-.form-group input {
-    flex: 1;
+.form-group input:focus,
+.message-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 3px rgba(5, 90, 5, 0.3);
 }
 
-.form-group textarea {
-    resize: vertical;
-}
-
-/* Radio Group Styling */
+/* Purpose Group - Radio Buttons */
 .purpose-group {
     margin-bottom: 1.5rem;
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.purpose-group label {
+.purpose-group > label {
     font-weight: bold;
     color: var(--primary-color);
-    width: 80px;
-    min-width: 80px;
 }
 
 .radio-options {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    flex: 1;
+    padding-left: 0.5rem;
 }
 
 .radio-option {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-weight: normal;
     cursor: pointer;
+    font-weight: normal;
 }
 
 .radio-option input[type="radio"] {
     width: auto;
     margin: 0;
+    cursor: pointer;
 }
 
 /* Message Textarea */
 .message-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .message-group label {
-    min-width: 80px;
     font-weight: bold;
     color: var(--primary-color);
-    width: 80px;
 }
 
 .message-group textarea {
-    padding: 0.5rem;
+    padding: 0.7rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: var(--body-font);
     font-size: 0.9rem;
-    background-color: white;
-    flex: 1;
     resize: vertical;
-    min-height: 80px;
+    min-height: 100px;
 }
 
 /* Checkbox Group */
@@ -226,13 +249,19 @@ header img {
 .checkbox-label input[type="checkbox"] {
     width: auto;
     margin: 0;
+    cursor: pointer;
 }
 
 /* Submit Button */
+.submit-container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
 .submit-btn {
     background-color: var(--primary-color);
     color: white;
-    padding: 0.6rem 2rem;
+    padding: 0.75rem 2rem;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
@@ -251,11 +280,14 @@ header img {
     border: 1px solid #999;
     padding: 1.5rem;
     border-radius: 8px;
+    background-color: white;
 }
 
 .employees h2 {
     text-align: center;
     margin-bottom: 2rem;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
 }
 
 .employee-profiles {
@@ -269,6 +301,7 @@ header img {
     background-color: var(--accent2-color);
     padding: 1rem;
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
 .employee-card:hover {
@@ -287,6 +320,7 @@ header img {
     margin: 0;
     font-weight: bold;
     color: var(--primary-color);
+    font-size: 1rem;
 }
 
 .employee-card .employee-title {
@@ -296,118 +330,45 @@ header img {
     margin-top: 0.25rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .company-section {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .form-group,
-    .purpose-group,
-    .message-group {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .form-group label,
-    .purpose-group label,
-    .message-group label {
-        width: auto;
-        margin-bottom: 0.25rem;
-    }
-
-    .form-row {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .contact-section {
-        grid-template-columns: 1fr;
-    }
-
-    .radio-options {
-        width: 100%;
-    }
-
-    .employee-profiles {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .company-details {
-        padding: 1.5rem;
-    }
-
-    .contact-form {
-        padding: 1.5rem;
-    }
-
-    .map-container iframe {
-        height: 250px;
-    }
-}
-
+/* Footer Styles */
 footer {
     background-color: #b9a7d6;
-    padding: 1rem;
+    padding: 1rem 2rem;
     text-align: center;
-    border: 1px solid #999;
-    width: 840px;
+    border-top: 1px solid #999;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 15px;
-    border-top: 1px solid #000;
     display: flex;
-    justify-content: flex-end;
-}
-
-footer img {
-    width: 50px;
-    height: auto;
-    margin-left: 10px;
-}
-
-nav {
-    background-color: #333;
-    padding: 1rem;
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-nav a {
-    color: white;
-    padding: 0.5rem 1rem;
-    display: block;
-    text-decoration: none;
-    font-weight: bold;
+footer p {
+    margin: 0;
+    color: #333;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 15px;
+    background-color: transparent;
+    padding: 0;
 }
 
 .socialmedia a {
+    display: inline-block;
     text-decoration: none;
-    display: flex;
-    gap: 15px;
 }
 
 .socialmedia img {
     width: 30px;
-}
-
-main {
-    max-width: 840px;
-    margin: 0 auto;
-}
-
-main img {
-    width: 150px;
     height: auto;
-    border: 2px solid #ddd;
-    padding: 10px;
-    box-shadow: 0 0 30px gray;
+    transition: transform 0.3s;
 }
 
-.map {
-    width: 100%;
-    height: 450px;
-    border: 0;
+.socialmedia img:hover {
+    transform: scale(1.1);
 }
