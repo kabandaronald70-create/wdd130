@@ -6,6 +6,7 @@
     --text-color: #333333;
     --border-color: #999999;
     --footer-bg: #b9a7d6;
+    --background-light: #ffffff;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -841,49 +842,6 @@ footer p {
     text-decoration: none;
     border-radius: 40px;
     display: inline-block;
-}
-
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .grid-2col {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-heading-box {
-        width: 90%;
-        padding: 1rem;
-    }
-
-    .hero-title {
-        font-size: 1.8rem;
-    }
-
-    .newsletter-inner {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .trips-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .trips-table th,
-    .trips-table td {
-        padding: 0.5rem;
-        font-size: 0.85rem;
-    }
 }
 
 /*==========ABOUT US PAGE UPDATED STYLES=============*/
