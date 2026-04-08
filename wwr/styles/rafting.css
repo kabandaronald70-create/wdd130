@@ -986,11 +986,6 @@ footer p {
     transform: scale(1.05);
 }
 
-/* Social Media Links - Remove underline (already added but ensuring it's there) */
-.socialmedia a {
-    text-decoration: none;
-}
-
 /* About Us Responsive */
 @media (max-width: 768px) {
     .hero h1 {
